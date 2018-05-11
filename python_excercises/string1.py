@@ -21,6 +21,13 @@
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
+  # HINT: check the count (if else) and use string formatting operator depend on the number (please have a look at
+  # useful link: https://docs.python.org/3.4/library/string.html, section 6.1.3.2
+  # You can use also C-like way: https://www.learnpython.org/en/String_Formatting
+  # Please look also on ternary operator in python. Below example, but again - do not use it, but rather invent something own
+  """
+    return 'Number of donuts: %s'.format( str(count) if  0 < count <10 else 'many')
+  """
   # +++your code here+++
   return
 
@@ -31,6 +38,12 @@ def donuts(count):
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
 def both_ends(s):
+  """
+  HINT: Use of course conditional (>2) and remember that string is just a list (array) of chars.
+  You can use slice operator there as well (like for lists etc)
+  :param s:
+  :return:
+  """
   # +++your code here+++
   return
 
@@ -44,7 +57,13 @@ def both_ends(s):
 # Assume that the string is length 1 or more.
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
+
 def fix_start(s):
+  """
+  There is already a hint. Use replace + string concatenation
+  :param s:
+  :return:
+  """
   # +++your code here+++
   return
 

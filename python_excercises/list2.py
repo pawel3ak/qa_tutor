@@ -14,6 +14,12 @@
 # modify the passed in list.
 def remove_adjacent(nums):
   # +++your code here+++
+
+  #HINT: there is such collection like set - set has the feature which You need there - it contains non-repetetive elements.
+  #  Please consider this:)
+  # Another one method - which is more obvious - is creating another one list in function body and iterate on input list,
+  #  and then checking if our new list contains iterator (currently pointed element) or not. Similar to previous one excercises :)
+
   return
 
 
@@ -23,6 +29,24 @@ def remove_adjacent(nums):
 # pass of both lists.
 def linear_merge(list1, list2):
   # +++your code here+++
+  # HINT: iterate on the longer collection (list in this case) and compare elements from both lists.
+  # Manipulate indexes (in similar way like below). Try to invent another one solution (different from this below)
+  """
+  _new_list = []
+  _index1 = 0
+  _index2 = 0
+
+  while(True):
+    if len(_new_list) == len(list1 + list2):
+      return _new_list
+
+    if list1[_index1] > list2[_index2]:
+       _new_list.append(list2[_index2])
+       _index2 += 1
+    else:
+      _new_list.append(list1[_index1])
+      _index1 += 1
+  """
   return
 
 # Note: the solution above is kind of cute, but unforunately list.pop(0)

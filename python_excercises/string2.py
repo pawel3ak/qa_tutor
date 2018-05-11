@@ -13,6 +13,11 @@
 # If the string length is less than 3, leave it unchanged.
 # Return the resulting string.
 def verbing(s):
+  """
+  Not hint needed I think - all what You need You have trained in previous scripts. Slicing, and if construction
+  :param s:
+  :return:
+  """
   # +++your code here+++
   return
 
@@ -26,6 +31,9 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
+  """
+  Same as above
+  """
   # +++your code here+++
   return
 
@@ -38,6 +46,12 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
+  """
+    Same as above. Always check length of word and divide it on half if even (and then mixin with halve from the second one
+    word. If not even (odd) then try to divide words like: pawel (5 chars, so first one halve have 2 + 1 length, and the second 2)
+    supermoc --> supe + rmoc
+    trening --> tren + ing   (3 + 3 + 1 --> this additional one is merged into front helve)
+  """
   # +++your code here+++
   return
 
