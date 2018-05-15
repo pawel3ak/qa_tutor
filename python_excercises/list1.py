@@ -2,6 +2,8 @@
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
+from operator import itemgetter
+
 
 # Basic list exercises
 # Fill in the code for the functions below. main() is already set up
@@ -18,8 +20,12 @@
 # and last chars of the string are the same.
 # Note: python does not have a ++ operator, but += works.
 def match_ends(words):
-  # +++your code here+++
-  return
+  counter = 0
+  for element in words:
+    if element.__len__() >= 2 and element[0] == element[-1] :
+      counter += 1
+
+  return counter
 
 
 # B. front_x
@@ -31,7 +37,16 @@ def match_ends(words):
 # before combining them.
   # +++your code here+++
 def front_x(words):
-  return
+
+  _list_with_x_first = list()
+  _list_without_x = list()
+  for element in words:
+    if element[0] == 'x':
+      _list_with_x_first.append(element)
+    else :
+      _list_without_x.append(element)
+
+  return sorted(_list_with_x_first) + sorted(_list_without_x)
 
 
 
@@ -41,9 +56,14 @@ def front_x(words):
 # e.g. [(1, 7), (1, 3), (3, 4, 5), (2, 2)] yields
 # [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
 # Hint: use a custom key= function to extract the last element form each tuple.
+
+# def sorting_key(_tuple):
+#   return _tuple[-1]
+
+
 def sort_last(tuples):
-  # +++your code here+++
-  return
+
+  return sorted(tuples, key=itemgetter(-1))
 
 
 # Simple provided test() function used in main() to print
