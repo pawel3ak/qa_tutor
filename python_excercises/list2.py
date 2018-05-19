@@ -13,6 +13,10 @@
 # so [1, 2, 2, 3] returns [1, 2, 3]. You may create a new list or
 # modify the passed in list.
 def remove_adjacent(nums):
+    _set_list_with_single_number = set()
+    for element in nums :
+        _set_list_with_single_number.add(element)
+    return list(_set_list_with_single_number)
   # +++your code here+++
 
   #HINT: there is such collection like set - set has the feature which You need there - it contains non-repetetive elements.
@@ -22,6 +26,11 @@ def remove_adjacent(nums):
 
   return
 
+    # _list_without_double = list()
+    # for element in nums :
+    #     if _list_without_double.__len__() <= nums.__len__()  and element != nums.__iter__().next() :
+    #        _list_without_double.append(element)
+    # return _list_without_double
 
 # E. Given two lists sorted in increasing order, create and return a merged
 # list of all the elements in sorted order. You may modify the passed in lists.
