@@ -31,6 +31,9 @@ When that's working, try for the next milestone.
 Optional: define a helper function to avoid code duplication inside
 print_words() and print_top().
 
+
+HINT: Open Run/debug configuration and provide there parameters. Google also 'How to provide command line parameters using pyCharm
+
 """
 
 import sys
